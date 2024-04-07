@@ -10,7 +10,7 @@ X_test = np.genfromtxt("data/test_features.csv")
 y_test = np.genfromtxt("data/test_labels.csv")
 
 # Fit a model
-depth = 5
+depth = 3
 clf = RandomForestClassifier(max_depth=depth)
 clf.fit(X_train, y_train)
 
@@ -24,3 +24,4 @@ disp = ConfusionMatrixDisplay.from_estimator(
     clf, X_test, y_test, normalize="true", cmap=plt.cm.Blues
 )
 plt.savefig("plot.png")
+git push origin experiment
